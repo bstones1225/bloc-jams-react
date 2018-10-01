@@ -1,0 +1,12 @@
+>  In your own words, explain single-page applications and progressive web apps.
+
+A: Single-page are updated dynamically. It doesn't bring a whole new page, but manipulates the data. It doesn't look like the user navigates anywhere when using the site. Progressive web pages, or PWA, are more traditonal web development. Single-Page apps can be a Progressive Web App. Progressive Web Application is more like a mindset. PWA's are safe and fit any device are some things that are a benefit of PWA's that can be applied to a Single-Page application.    
+   
+>  Either from your research or by inspecting popular sites you frequent (using the Chrome DevTools), give some real-world examples of applications built with React and Angular.
+    
+A: React - Reddit, ESPN, LEGO, IMDB
+   Angular - Greatclips, Western Digital (WDC.com)
+
+>  Write a summary of the benefits of React vs. Angular. Then ask your mentor about the current state of web development, and ask questions about how they use these two popular technologies in their work.
+
+A: React is a simpler library, that can add features and packages. It being smaller allows less resources, but still being scalable. It can also be easier to learn at the start. AngularJS is a framework, and comes feature-heavy right of the box. Because its bigger, its a bigger learning curves, but still very powerful for enterprise sites.  
