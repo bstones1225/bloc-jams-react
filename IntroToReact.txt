@@ -1,0 +1,15 @@
+> In your own words, explain React's Virtual DOM. What gives React its fast performance?
+
+A: Virtual DOM is like a hidden page that keeps track of the DOM and its changes. Its fast perfomance is because of this Virtual DOM because it allows only changes to be updated to the DOM instead of a full page call.
+    
+> In your own words, describe React's core concept of uni-directional data flow. Draw diagrams to illustrate. Discuss the answer with your mentor in your next session.
+
+A: React's uni-directional data flow is having 1 watcher which means dynamically updating. 2-way data binding would have a 2nd watcher to determine if the user changed the value
+
+1 Way binding-  Input ---> onChange/Event ----> View
+
+2 Way binding - Input <---> Event <---> Bind new value <---> View
+                             
+
+
+
