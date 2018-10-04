@@ -1,0 +1,92 @@
+####Questions
+
+
+> Peruse the Official React documentation by Facebook, note down anything interesting you find and discuss learnings with your mentor and Bloc Slack community. In addition, discuss with your mentor a strategy to read documentation more efficiently. This is a critically important skill to develop as software developer, as technologies keep evolving.
+
+A: I think its interesting how React keeps code organized with components. I discussed this with my mentor, and we also talked about the benefits of React and its future.   
+
+
+> Referring to the official documentation, build another simple React component from scratch similar to the one we built. Discuss your experience building the component from scratch with your mentor.
+
+####Code
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My First React app</title>
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <script type="text/babel">
+       class Menu extends React.Component {
+         render() {
+           return (
+             <div>
+               <h1>Brian Stones Restuarant</h1>
+             
+		<table id='menu'>
+            <caption>Our Menu</caption>
+            <thead>
+                   <tr>
+                    <th> Food </th>
+                    <th> Description </th>
+                    <th> Price </th>
+                   </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Salad</td>
+
+                    <td> Fresh, delicious Cobb Salad </td>
+                    <td> $7.99 </td>
+                </tr>
+                <tr>
+                    <td>Burger</td>
+                    <td> 1/4 lb grass-fed burger with choice of cheese </td>
+                    <td> $6.99 </td>
+                </tr>
+                <tr>
+                    <td>Chicken Salad Sandwich</td>
+                    <td> Our world famous chicken salad on a bagel with homemade pickles </td>
+                    <td> $6.99 </td>
+               </tr>
+               <tr>
+                    <td>Buffalo Chicken Sandwich</td>
+                    <td> Spicy fried chicken on a brioche bun </td>
+                    <td> $10.99 </td>
+               </tr>
+               <tr>
+                    <td>Fries</td>
+                    <td> Hand cut potatoes lightly fried and seasoned </td>
+                    <td> $1.99 </td>
+               </tr>
+               <tr>
+                    <td>Soda</td>
+                    <td> Regular, diet, orange, or root beer </td>
+                    <td> $1.00 </td>
+               </tr>
+            </tbody>
+        </table>
+	</div>	
+           );
+
+         }
+
+       }
+
+ 
+       ReactDOM.render(
+         <Menu />, document.getElementById('app')
+       );
+    </script>
+  </body>
+</html>
+```
