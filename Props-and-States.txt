@@ -1,0 +1,76 @@
+####Questions
+
+> In your own words, explain the essential differences between `props` and `state` in React. Which is immutable or read-only, and which changes? Submit your response in the submission text area and discuss the answer with your mentor.
+
+A: `state` is changeded by the user, and controlled by the components.So the `state` is mutable. `props` are the properties of the components, recieved from above and therefore immutable. Meaning that it is passed into the Component, and not changed.I discussed `state` and `props` with my mentor.
+
+
+> Read the React official documentation on components and props, and brush up on JavaScript ES6 *classes
+
+####Code
+
+```
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()}; 
+  }
+   render() {
+    return (
+      <div>        
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }  
+ } 
+
+function CreateTable(props){
+ return(  <table>
+          <TableHeader  
+           food={headers.food}
+           desc={headers.desc}
+           price={headers.price} />
+          <tbody>
+          <Salad 
+           food={salad.food}
+           desc={salad.desc}
+           price={salad.price} />
+          </tbody>  
+          </table>);
+}
+
+
+function TableHeader(props){
+  return   (             
+            <thead><tr>
+              <th>{props.food}</th>
+              <th>{props.desc}</th>
+              <th>{props.price}</th>
+            </tr></thead>);}
+function Salad(props){
+ return (                      
+            <tr>
+              <td>{props.food}</td>
+              <td>{props.desc}</td>
+              <td>{props.price} </td>
+            </tr>)}
+
+const headers = {
+      food: "Food",
+      desc: "Description",
+      price: "Price" 
+};
+const salad = {
+      food: "Salad",
+      desc: "Fresh, delicious Cobb Salad",
+      price: "17.99"
+};
+
+ReactDOM.render(
+  <div>
+  <Clock />
+  <CreateTable />
+    </div>,
+         document.getElementById('app')        
+       );
+```
