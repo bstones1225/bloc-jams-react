@@ -1,0 +1,8 @@
+####Questions
+
+>  In your own words, explain the React core concept of encapsulation. Discuss why this React principle is important in application development.
+
+A: Encapsulating a code into a function or component hides the information and allows props to be passed in order to control the function. This allows isolation which is important in development because its keeps things in small, completed pieces to be reused or easy to update.
+
+>  Read the React Official Document on handling events
+
