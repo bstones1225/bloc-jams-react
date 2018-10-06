@@ -1,0 +1,9 @@
+####Questions
+
+> Read Thinking in React to understand how to turn a concept for an app into a set of React components.
+
+> Read React Without JSX.
+    
+> In your own words, explain what happens behind the scenes when you use JSX.
+
+A: JSX is a JavaScript Syntax Extension, so it allows XML-like code. It shorthands the syntax to accomplish this in the code so `createElement()` isn't written over and over
