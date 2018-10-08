@@ -7,9 +7,9 @@ class App extends Component {
    super(props);
    this.state = {
   todos: [
-    { description: 'Walk the cat', isCompleted: true },
-    { description: 'Throw the dishes away', isCompleted: false },
-    { description: 'Buy new dishes', isCompleted: false }
+    { description: 'Walk the cat', isCompleted: true},
+    { description: 'Throw the dishes away', isCompleted: false},
+    { description: 'Buy new dishes', isCompleted: false}
   ],
   newTodoDescription: ''
 };
@@ -29,13 +29,24 @@ class App extends Component {
     todo.isCompleted = todo.isCompleted ? false : true;
     this.setState({ todos: todos });
   }
+  deleteTodo(index) {
+    console.log("deleteTodo triggered");
+    console.log(index);
+    const todos = this.state.todos.filter((todo, todoIndex) => {
+    return todoIndex !== index})
+//    const todos = this.state.todos.slice();
+//    const todo = todos[index];
+//    todo.isDeleted = todo.isDeleted ? false : true;
+//    todos.splice(todo,1);
+     this.setState({todos});
+   }
 
   render() {
     return (
       <div className="App">
        <ul>
           { this.state.todos.map( (todo, index) =>
-          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } />
+          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } deleteTodo={() => this.deleteTodo(index)}/>
 )}
        </ul>
        <form onSubmit={ (e) => this.handleSubmit(e) }>
