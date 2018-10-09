@@ -1,0 +1,67 @@
+####Checkpoint
+
+```
+/src
+	/components
+		/MusicPlayer
+			/Buttons
+				/play.js
+				/pause.js
+				/prevtrack.js
+				/nexttrack.js
+				/seek.js
+				/volume.js
+				/index.js
+			/musicplayer.js
+			/musicplayer.css
+			/musicplayer_test.js
+			/index.js
+		/Album
+			/cover.js
+			/cover.pdf
+			/title.js
+			/index.js
+		/AlbumList
+			/albumlist.js
+			/index.js
+	/scenes
+		/Home
+			/Header
+				/name.js
+				/slogan.js
+				/features.js
+				
+		/Nav
+					
+			/liblink.js
+		/Library
+			/library.js
+			/index.js
+			/library.css
+```
+
+
+
+####Assignment
+
+```
+/src
+	/components
+		/App
+			/App.js
+			/app.css
+			/app_test.js
+			/index.js
+		/Feature
+			/feature.js
+			/feature.css
+			/feature_test.js
+			/index.js
+		/index.js
+	/index.js
+	/main.css
+```				
+
+				
+		
+			
