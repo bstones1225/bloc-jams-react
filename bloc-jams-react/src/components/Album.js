@@ -148,7 +148,7 @@ return (index+1)
             <tr key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnter(song)} onMouseLeave={() => this.mouseLeave(song)}>
             <td>{this.getSongIcon(song,index)}  </td>
             <td>{song.title}</td>
-            <td>{Math.round(song.duration) + " seconds"}</td>
+            <td>{this.formatTime(song.duration)}</td>
             </tr>
           ))}
           </tbody>
