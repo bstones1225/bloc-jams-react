@@ -15,6 +15,7 @@ class Album extends Component {
     currentTime: 0,
     duration: album.songs[0].duration,
     isPlaying: false,
+    currentVolume: 0.0,
     isMouseInside:null
   };
     this.audioElement = document.createElement('audio');
@@ -29,15 +30,17 @@ class Album extends Component {
      durationchange: e => {
        this.setState({ duration: this.audioElement.duration });
      }
-   };
+
+  };
    this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate);
    this.audioElement.addEventListener('durationchange', this.eventListeners.durationchange);
- }
+}
 
  componentWillUnmount() {
    this.audioElement.src = null;
    this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
    this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
+
 }
 
  play() {
@@ -73,7 +76,7 @@ class Album extends Component {
   }
   handleNextClick() {
     const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
-    const newIndex = Math.max(0, currentIndex + 1);
+    const newIndex = Math.min(this.state.album.songs.length-1, currentIndex + 1);
     const newSong = this.state.album.songs[newIndex];
     this.setSong(newSong);
     this.play();
@@ -83,16 +86,28 @@ class Album extends Component {
      this.audioElement.currentTime = newTime;
      this.setState({ currentTime: newTime });
    }
+  handleVolumeChange(e) {
+     const newVolume = e.target.value;
+     this.audioElement.volume = newVolume;
+     this.setState({ currentVolume: newVolume });
+    }
+  formatTime(time) {
+     var minutes = Math.floor(time / 60);
+     var seconds = Math.round(time - minutes * 60);
+     if (seconds < 10) {
+       return minutes + ": 0" + seconds
+   } else {
+       return minutes + ":" + seconds
+   }
+ }
 
 
 
   mouseEnter = (song) => {
     this.setState({ isMouseInside: song });
-  console.log("hello")
   }
   mouseLeave = (song) => {
     this.setState({ isMouseInside: song });
-  console.log("Bye")
   }
 
 getSongIcon(song,index){
@@ -143,10 +158,13 @@ return (index+1)
             currentSong={this.state.currentSong}
             currentTime={this.audioElement.currentTime}
             duration={this.audioElement.duration}
+            currentVolume={this.audioElement.currentVolume}
             handleSongClick={() => this.handleSongClick(this.state.currentSong)}
             handlePrevClick={() => this.handlePrevClick()}
             handleNextClick={() => this.handleNextClick()}
             handleTimeChange={(e) => this.handleTimeChange(e)}
+            handleVolumeChange={(e) => this.handleVolumeChange(e)}
+            formatTime={(time) => this.formatTime(time)}
           />
        </section>
      );
