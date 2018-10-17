@@ -12,3 +12,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.player-bar {
+  position: fixed;
+  background: red;
+  bottom:0;
+  width:100%;
+}
+#album-info {
+  background-color: blue;
+  right:0;
+  position:fixed;
+
+}
+.album{
+  float:left;
+  background-color: blue;
+  width:75%;
+
+}
