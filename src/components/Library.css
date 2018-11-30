@@ -1,0 +1,54 @@
+.library{
+  border: 1px solid #ccc;
+  padding: 0 6px 0 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+.albums{
+  border: 1px solid #ccc;
+  height:auto;
+}
+
+
+.albums:hover{
+  border: 1px solid #777;
+  background-color:blue;
+
+}
+
+
+img {
+  object-position: center;
+  text-align: center;
+  width: 100%;
+  height: 60%;
+
+}
+.albumInfo{
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  width: 100%;
+  height:20%;
+  text-decoration: none;
+
+}
+
+@media only screen and (max-width: 700px) {
+    .library {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .library{
+        width: 100%;
+        margin: 6px 0;
+
+    }
+}

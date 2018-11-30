@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PlayerBar.css';
 
  class PlayerBar extends Component {
    render() {
@@ -6,20 +7,20 @@ import React, { Component } from 'react';
        <section className="player-bar">
         <section id="buttons">
           <button id="previous" onClick={this.props.handlePrevClick}>
-            <span className="ion-md-skip-backward"></span>
+            <span className="ion-md-arrow-back"></span>
           </button>
           <button id="play-pause" onClick={this.props.handleSongClick} >
-            <span className={this.props.isPlaying ? 'ion-md-pause' : 'mdl-button mdl-js-button mdl-button--fab mdl-button--primary'}></span>
+            <span className={this.props.isPlaying ? 'ion-md-pause' : 'ion-md-play'}></span>
           </button>
           <button id="next" onClick={this.props.handleNextClick}>
-            <span className="ion-md-skip-forward"></span>
+            <span className="ion-md-arrow-forward"></span>
           </button>
         </section>
         <section id="time-control">
           <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
           <input
             type="range"
-            className="seek-bar"
+            className="mdl-slider mdl-js-slider"
             value={(this.props.currentTime / this.props.duration) || 0}
             max="1"
             min="0"

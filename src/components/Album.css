@@ -1,0 +1,71 @@
+.album{
+  border: 7px solid #ccc;
+  display:grid;
+  grid-template-areas:
+
+    'art art album'
+    'art art song'
+
+    'art art song'
+    'art art song'
+    'player player player'
+
+    ;
+  padding:2px;
+  grid-gap: 2px;
+
+
+}
+#album-cover-art{
+  grid-area: art;
+  text-align: center;
+  height:auto;
+
+
+}
+#song-list{
+  grid-area: song;
+  height:100%;
+  text-align: center;
+
+  background-color: white;
+  font-size: 20px;
+  border: 2px solid black;
+
+}
+
+.title{
+  font-weight: bold;
+}
+.album-details{
+
+  grid-area: album;
+  text-align: left;
+
+}
+td, tr, tbody, table{
+  border: 2px solid black;
+  text-align: center;
+  border-style:solid;
+
+}
+
+.player-bar {
+  grid-area: player;
+
+}
+
+@media only screen and (max-width: 700px) {
+    .album {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .album{
+        width: 100%;
+        margin: 6px 0;
+
+    }
+}

@@ -9,17 +9,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <header>
+      <header className="App-header">
+      <h1>Bloc Jams</h1>
+
         <nav>
-          <Link to='/'>Landing</Link>
-          <Link to='/library'>Library</Link>
+          <div className="navLinks">
+          <Link to='/' className="JamLinks">Landing</Link>
+          <Link to='/library' className="JamLinks">Library</Link>
+          </div>
         </nav>
-        <h1>Bloc Jams</h1>
-      </header>
+        </header>
+
       <main>
+        <div>
         <Route exact path="/" component={Landing} />
         <Route path="/library" component={Library} />
         <Route path="/album/:slug" component={Album} />
+        </div>
       </main>
       </div>
     );
