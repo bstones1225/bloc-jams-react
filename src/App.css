@@ -32,10 +32,15 @@ nav {
   float: left;
   display: block;
   color: #f2f2f2;
-
+  height:auto;
   padding: 14px 16px;
   text-decoration: none;
 
+}
+.App .logo{
+  padding:0;
+  height:15px;
+  width:30px;
 }
 
 .App .JamLinks:active{
